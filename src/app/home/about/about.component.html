@@ -1,0 +1,26 @@
+<section id="sobre" class="py-24 px-6 bg-card/40 border-y border-border">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-xs uppercase tracking-widest text-primary">Sobre nós</span>
+      <h2 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight">
+        Paixão por cada detalhe
+      </h2>
+      <p class="mt-6 text-muted-foreground">
+        A Garagem R2 nasceu da paixão por carros e do cuidado obsessivo com os detalhes. Somos uma estética automotiva nova, mas com técnica apurada e compromisso real com cada cliente.
+      </p>
+      <ul class="mt-8 space-y-3">
+        <li *ngFor="let benefit of benefits" class="flex items-center gap-3 text-sm">
+          <span class="text-primary">✓</span> {{ benefit }}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <img
+        src="assets/service-micro-pintura.png"
+        alt="Polimento profissional"
+        loading="lazy"
+        class="rounded-xl border border-border object-cover aspect-square w-full"
+      />
+    </div>
+  </div>
+</section>
