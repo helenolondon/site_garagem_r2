@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Sparkles, Droplets, Shield, Car, Phone, MapPin, Instagram, Clock, Check } from "lucide-react";
-import heroCar from "@/assets/hero-car.jpg";
-import serviceMicropintura from "@/assets/service-micro-pintura.png";
-import serviceInterior from "@/assets/service-interior.jpg";
-import serviceCeramic from "@/assets/service-ceramic.jpg";
-import logo from "@/assets/garagem r2 logo.png";
+import heroCar from "../assets/hero-car.jpg";
+import serviceMicropintura from "../assets/service-micro-pintura.png";
+import serviceInterior from "../assets/service-interior.jpg";
+import serviceCeramic from "../assets/service-ceramic.jpg";
+import logo from "../assets/garagem r2 logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
