@@ -1,7 +1,7 @@
-import { defineConfig } from 'vinxi';
+import { createApp } from 'vinxi'; // Corrigido aqui
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig({
+export default createApp({ // Corrigido aqui
   routers: [
     {
       name: 'public',
@@ -12,7 +12,7 @@ export default defineConfig({
     {
       name: 'client',
       type: 'spa',
-      handler: './index.html', // Vincula o HTML base que criamos
+      handler: './index.html',
       target: 'browser',
       plugins: () => [tsconfigPaths()],
     },
