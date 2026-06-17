@@ -6,7 +6,7 @@ export default createApp({
     {
       name: 'client',
       type: 'spa',
-      handler: './index.html', // Agora aponta para o HTML que criamos
+      handler: './index.html',
       plugins: () => [tsconfigPaths()],
     },
   ],
