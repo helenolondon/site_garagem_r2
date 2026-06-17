@@ -1,0 +1,21 @@
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
+  <div class="max-w-6xl mx-auto px-6 h-36 flex items-center justify-between">
+    <a (click)="scrollToSection('top')" class="flex items-center gap-3 cursor-pointer">
+      <img src="assets/garagem r2 logo.png" alt="Garagem R2" class="h-32 w-auto" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-2xl text-muted-foreground">
+      <a (click)="scrollToSection('servicos')" class="hover:text-foreground transition-colors cursor-pointer">Serviços</a>
+      <a (click)="scrollToSection('sobre')" class="hover:text-foreground transition-colors cursor-pointer">Sobre</a>
+      <a (click)="scrollToSection('precos')" class="hover:text-foreground transition-colors cursor-pointer">Preços</a>
+      <a (click)="scrollToSection('contato')" class="hover:text-foreground transition-colors cursor-pointer">Contato</a>
+    </nav>
+    <a
+      [href]="whatsappUrl"
+      target="_blank"
+      rel="noreferrer"
+      class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-base font-medium text-primary-foreground hover:opacity-90 transition"
+    >
+      Agendar
+    </a>
+  </div>
+</header>
