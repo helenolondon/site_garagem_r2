@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vinxi build --preset cloudflare-pages",
+    "build": "vinxi build --preset cloudflare-pages && mkdir -p dist/client && cp -r .vinxi/build/client/* dist/client/",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
