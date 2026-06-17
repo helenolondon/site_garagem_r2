@@ -1,7 +1,7 @@
-import { defineConfig } from 'vinxi';
+import { createApp } from 'vinxi';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig({
+export default createApp({
   routers: [
     {
       name: 'public',
@@ -12,7 +12,7 @@ export default defineConfig({
     {
       name: 'client',
       type: 'spa',
-      handler: './src/routes/index.tsx', // Ponto de entrada das suas rotas
+      handler: './src/routes/index.tsx', // Seu ponto de entrada
       target: 'browser',
       plugins: () => [tsconfigPaths()],
     },
