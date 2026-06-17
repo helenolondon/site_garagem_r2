@@ -4,16 +4,9 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default createApp({
   routers: [
     {
-      name: 'public',
-      type: 'static',
-      dir: './public',
-      base: '/',
-    },
-    {
       name: 'client',
       type: 'spa',
-      handler: './src/routes/index.tsx', // Seu ponto de entrada
-      target: 'browser',
+      handler: './index.html', // O vinxi gerencia o ponto de entrada SPA através deste handler virtual
       plugins: () => [tsconfigPaths()],
     },
   ],
