@@ -1,0 +1,74 @@
+
+
+
+example index.html
+
+Here’s a clean, simple index.html example you can use as a starting point:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Simple Website</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+
+  <main>
+    <h2>Hello 👋</h2>
+    <p>This is a simple HTML page example.</p>
+
+    <button onclick="sayHello()">Click me</button>
+
+    <p id="output"></p>
+  </main>
+
+  <script>
+    function sayHello() {
+      document.getElementById("output").innerText =
+        "Hello! JavaScript is working 🎉";
+    }
+  </script>
+</body>
+</html>
