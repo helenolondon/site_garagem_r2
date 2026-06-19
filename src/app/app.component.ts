@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
-import { GoogleAnalyticsService } from './services/google-analytics.service';
 import { filter } from 'rxjs/operators';
+import { GoogleAnalyticsService } from './google-analytics.service';
 
 @Component({
   selector: 'app-root',
