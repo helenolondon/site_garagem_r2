@@ -11,6 +11,7 @@ export class GoogleAnalyticsService {
   trackPageView(url: string): void {
     // Verifica se o gtag está disponível
     if (typeof window !== 'undefined' && (window as any).gtag) {
+      
       (window as any).gtag('config', this.trackingId, {
         page_path: url
       });
