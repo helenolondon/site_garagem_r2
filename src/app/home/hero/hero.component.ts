@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
 export class HeroComponent {
   whatsappUrl = 'https://wa.me/5527997332033?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço.';
   stats = [
-    { n: '3h', l: 'Tempo médio' }
+    {  },
+    { n: '3h', l: 'Tempo médio' },
+    {  }
   ];
 
   scrollToSection(sectionId: string): void {
