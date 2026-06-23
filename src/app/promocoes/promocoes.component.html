@@ -1,0 +1,60 @@
+<div class="min-h-screen bg-background text-foreground">
+  <app-header></app-header>
+  
+  <section id="top" class="relative pt-36 pb-8 overflow-hidden">
+    <div class="absolute inset-0" style="background: var(--gradient-hero)"></div>
+    <div class="absolute inset-0 bg-background/30"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="text-center mb-6">
+        <span class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm uppercase tracking-widest font-semibold mt-5">
+          🔥 Promoções Especiais
+        </span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
+          Ofertas <span style="color: #FFFFFF; text-shadow: 0 0 20px rgba(0,174,255,1);">imperdíveis</span>
+        </h1>
+        <p class="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+          Aproveite nossas promoções exclusivas com descontos de até 30%. Serviços premium com qualidade garantida.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div *ngFor="let promocao of promocoes" class="rounded-2xl border border-primary/30 bg-primary/10 overflow-hidden backdrop-blur-sm hover:border-primary/50 transition-all flex flex-col" style="width: 526px; height: 477px;">
+          <div class="h-48 w-full overflow-hidden">
+            <img
+              [src]="promocao.imagem"
+              [alt]="promocao.titulo"
+              class="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-sm font-bold text-primary-foreground">
+                {{ promocao.desconto }}
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">{{ promocao.titulo }}</h3>
+            <p class="text-muted-foreground mb-4">{{ promocao.descricao }}</p>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-lg line-through text-muted-foreground">{{ promocao.precoOriginal }}</span>
+              <span class="text-3xl font-bold text-primary">{{ promocao.precoPromocional }}</span>
+            </div>
+            <button
+              (click)="agendarPromocao(promocao)"
+              class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground hover:opacity-90 transition"
+              style="box-shadow: var(--shadow-glow)"
+            >
+              📞 Agendar Agora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>
