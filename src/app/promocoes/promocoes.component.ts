@@ -17,7 +17,7 @@ export class PromocoesComponent {
     {
       id: 1,
       titulo: 'Polimento + aplicação de selante de pintura',
-      descricao: 'Lavagem simples, descontaminação de pintura, aspiração completa e polimento da comercial com aplicação de selante.',
+      descricao: 'Lavagem simples, descontaminação de pintura, aspiração e polimento da comercial com aplicação de selante.',
       precoOriginal: 'R$ 560,00',
       precoPromocional: 'R$ 392,00',
       desconto: '30% OFF',

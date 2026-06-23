@@ -11,11 +11,11 @@
           🔥 Promoções Especiais
         </span>
         <h1 class="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
-          Ofertas <span style="color: #FFFFFF; text-shadow: 0 0 20px rgba(0,174,255,1);">imperdíveis</span>
+          🔥 Promoção válida somente até <span style="color: #FFFFFF; text-shadow: 0 0 20px rgba(0,174,255,1);">DOMINGO</span>
         </h1>
-        <p class="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Aproveite nossas promoções exclusivas com descontos de até 30%. Aproveite logo, vagas quase esgotadas para o final de semana.
-        </p>
+        <!-- <p class="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+          Promoções válidas para este fim de semana. 🔥 Promoção válida somente até domingo.
+        </p> -->
       </div>
     </div>
   </section>
@@ -23,7 +23,7 @@
   <section class="py-8">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div *ngFor="let promocao of promocoes" class="rounded-2xl border border-primary/30 bg-primary/10 overflow-hidden backdrop-blur-sm hover:border-primary/50 transition-all flex flex-col" style="width: 526px; height: 477px;">
+        <div *ngFor="let promocao of promocoes" class="rounded-2xl border border-primary/30 bg-primary/10 overflow-hidden backdrop-blur-sm hover:border-primary/50 transition-all flex flex-col w-full md:w-[526px] h-auto md:h-[477px]">
           <div class="h-48 w-full overflow-hidden">
             <img
               [src]="promocao.imagem"
