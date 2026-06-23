@@ -28,8 +28,8 @@ export class PromocoesComponent {
       titulo: 'Lavagem premium + cera em pasta',
       descricao: 'Lavagem externa detalhada, pretinho nos pneus, limpeza dos vidros, limpeza dos cantos de porta, limpeza dos plásticos internos, Limpeza das caixas de roda, aspiração completa',
       precoOriginal: 'R$ 140,00',
-      precoPromocional: 'R$ 98,00',
-      desconto: '30% OFF',
+      precoPromocional: 'R$ 112,00',
+      desconto: '20% OFF',
       imagem: '/assets/hero-car.jpg'
     },
     {
@@ -46,8 +46,8 @@ export class PromocoesComponent {
       titulo: 'Cristalização dos vidros',
       descricao: 'Descontaminação e cristalização dos vidros.',
       precoOriginal: 'R$ 150,00',
-      precoPromocional: 'R$ 105,00',
-      desconto: '30% OFF',
+      precoPromocional: 'R$ 120,00',
+      desconto: '20% OFF',
       imagem: '/assets/service-parabrisa.jpg'
     }
   ];
