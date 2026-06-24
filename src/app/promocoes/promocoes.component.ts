@@ -21,7 +21,8 @@ export class PromocoesComponent {
       precoOriginal: 'R$ 560,00',
       precoPromocional: 'R$ 392,00',
       desconto: '30% OFF',
-      imagem: '/assets/service-polish.jpg'
+      imagem: '/assets/service-polish.jpg',
+      textoBotao: 'Agendar Polimento'
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class PromocoesComponent {
       precoOriginal: 'R$ 140,00',
       precoPromocional: 'R$ 112,00',
       desconto: '20% OFF',
-      imagem: '/assets/hero-car.jpg'
+      imagem: '/assets/hero-car.jpg',
+      textoBotao: 'Agendar Lavagem'
     },
     {
       id: 3,
@@ -39,7 +41,8 @@ export class PromocoesComponent {
       precoOriginal: 'R$ 350,00',
       precoPromocional: 'R$ 245,00',
       desconto: '30% OFF',
-      imagem: '/assets/service-restauracao-farol.png'
+      imagem: '/assets/service-restauracao-farol.png',
+      textoBotao: 'Agendar Restauração'
     },
     {
       id: 4,
@@ -48,7 +51,8 @@ export class PromocoesComponent {
       precoOriginal: 'R$ 150,00',
       precoPromocional: 'R$ 120,00',
       desconto: '20% OFF',
-      imagem: '/assets/service-parabrisa.jpg'
+      imagem: '/assets/service-parabrisa.jpg',
+      textoBotao: 'Agendar Cristalização'
     }
   ];
 
