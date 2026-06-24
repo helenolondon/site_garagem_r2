@@ -10,8 +10,9 @@ export class GoogleAnalyticsService {
 
   trackPageView(url: string): void {
     // Verifica se o gtag está disponível
+    console.log((window as any).gtag);
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      
+      console.log('Imex', url);
       (window as any).gtag('config', this.trackingId, {
         page_path: url
       });

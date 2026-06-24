@@ -12,14 +12,16 @@ import { GoogleAnalyticsService } from './google-analytics.service';
 })
 export class AppComponent {
   title = 'Garagem R2';
-private readonly router = inject(Router);
+  private readonly router = inject(Router);
   private readonly gaService = inject(GoogleAnalyticsService);
 
   ngOnInit(): void {
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
+      console.log('Navigating to:', event.urlAfterRedirects);
       this.gaService.trackPageView(event.urlAfterRedirects);
+      console.log('Navigatinged to:', event.urlAfterRedirects);
     });
   }
 }
