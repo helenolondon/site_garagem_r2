@@ -8,18 +8,12 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script async src="https://googletagmanager.com"></script>
   
-    <!-- 2. Force-bind the window functions explicitly -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      
-      // Explicitly attach the gtag function to the global window object
-      window.gtag = function() {
-        window.dataLayer.push(arguments);
-      };
- 
-      // Run the initial setup
-      window.gtag('js', new Date());
-      window.gtag('config', 'AW-18241251753');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18241251753"></script> 
+    <script> 
+      window.dataLayer = window.dataLayer || []; 
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date()); 
+      gtag('config', 'AW-18241251753'); 
     </script>
   </head>
   <body>
