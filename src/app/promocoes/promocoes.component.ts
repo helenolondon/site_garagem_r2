@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../home/header/header.component';
 import { FooterComponent } from '../home/footer/footer.component';
+import { GoogleAnalyticsService } from '../google-analytics.service';
 
 @Component({
   selector: 'app-promocoes',
@@ -12,6 +13,8 @@ import { FooterComponent } from '../home/footer/footer.component';
 })
 export class PromocoesComponent {
   whatsappUrl = 'https://wa.me/5527997332033?text=Olá!%20Gostaria%20de%20agendar%20uma%20promoção.';
+
+  constructor(private gaService: GoogleAnalyticsService) {}
   
   promocoes = [
     {
@@ -57,6 +60,14 @@ export class PromocoesComponent {
   ];
 
   agendarPromocao(promocao: any): void {
+    // Rastrear evento de conversão no Google Ads
+    this.gaService.trackEvent('conversion', {
+      'send_to': 'AW-18241251753/CONVERSION_ID',
+      'value': promocao.precoPromocional,
+      'currency': 'BRL',
+      'transaction_id': `promo_${promocao.id}_${Date.now()}`
+    });
+
     const mensagem = `Olá! Gostaria de agendar a promoção: ${promocao.titulo} por ${promocao.precoPromocional}.`;
     const url = `${this.whatsappUrl}&text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
