@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GoogleAnalyticsService } from '../../google-analytics.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,4 +16,15 @@ export class ContactComponent {
     { icon: '🕐', title: 'Horário', text: 'Sáb e Dom · 08h às 18h' },
     { icon: '📞', title: 'Telefone', text: '(27) 99733-2033' }
   ];
+
+  constructor(private gaService: GoogleAnalyticsService) {}
+
+  agendarWhatsApp(): void {
+    this.gaService.trackEvent('conversion', {
+      'send_to': 'AW-18241251753/CONVERSION_ID',
+      'value': '0',
+      'currency': 'BRL'
+    });
+    window.open(this.whatsappUrl, '_blank');
+  }
 }

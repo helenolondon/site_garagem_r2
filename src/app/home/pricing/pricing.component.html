@@ -23,14 +23,12 @@
             <span class="text-primary flex-shrink-0 mt-0.5">✓</span> {{ item }}
           </li>
         </ul>
-        <a
-          [href]="whatsappUrl"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          (click)="agendarPlano(plan)"
           [class]="'mt-8 inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-medium transition ' + (plan.featured ? 'bg-primary text-primary-foreground hover:opacity-90' : 'border border-border hover:bg-secondary')"
         >
           Agendar
-        </a>
+        </button>
       </div>
     </div>
   </div>

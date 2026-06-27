@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { GoogleAnalyticsService } from '../../google-analytics.service';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,19 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   whatsappUrl = 'https://wa.me/5527997332033?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço.';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private gaService: GoogleAnalyticsService) {}
 
   navigateToPromocoes(): void {
     this.router.navigate(['/promocoes']);
+  }
+
+  agendarWhatsApp(): void {
+    this.gaService.trackEvent('conversion', {
+      'send_to': 'AW-18241251753/CONVERSION_ID',
+      'value': '0',
+      'currency': 'BRL'
+    });
+    window.open(this.whatsappUrl, '_blank');
   }
 
   scrollToSection(sectionId: string): void {

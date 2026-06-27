@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GoogleAnalyticsService } from '../../google-analytics.service';
 
 @Component({
   selector: 'app-pricing',
@@ -29,4 +30,16 @@ export class PricingComponent {
       items: ['Tudo do Premium', 'Aplicação de cera em pasta']
     }
   ];
+
+  constructor(private gaService: GoogleAnalyticsService) {}
+
+  agendarPlano(plan: any): void {
+    this.gaService.trackEvent('conversion', {
+      'send_to': 'AW-18241251753/CONVERSION_ID',
+      'value': plan.price.replace('R$ ', ''),
+      'currency': 'BRL',
+      'transaction_id': `plan_${plan.name}_${Date.now()}`
+    });
+    window.open(this.whatsappUrl, '_blank');
+  }
 }

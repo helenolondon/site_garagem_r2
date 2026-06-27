@@ -6,15 +6,13 @@
       <p class="mt-4 text-muted-foreground">
         Fale com a gente pelo WhatsApp e receba um orçamento personalizado em minutos.
       </p>
-      <a
-        [href]="whatsappUrl"
-        target="_blank"
-        rel="noreferrer"
+      <button
+        (click)="agendarWhatsApp()"
         class="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition"
         style="box-shadow: var(--shadow-glow)"
       >
         📞 Chamar no WhatsApp
-      </a>
+      </button>
     </div>
     <div class="space-y-5">
       <div *ngFor="let item of contactItems" class="flex items-start gap-4 rounded-lg border border-border bg-card p-5">

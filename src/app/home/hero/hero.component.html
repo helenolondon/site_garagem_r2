@@ -18,15 +18,13 @@
         Lavagem detalhada, polimento, higienização interna e vitrificação. Devolvemos ao seu carro o brilho de showroom — com técnica, produtos premium e atenção a cada detalhe.
       </p>
       <div class="mt-8 flex flex-wrap gap-3 justify-center">
-        <a
-          [href]="whatsappUrl"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          (click)="agendarWhatsApp()"
           class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition"
           style="box-shadow: var(--shadow-glow)"
         >
           📞 Agendar pelo WhatsApp
-        </a>
+        </button>
         <a
           (click)="scrollToSection('servicos')"
           class="inline-flex items-center gap-2 rounded-md border border-border bg-background/40 px-6 py-3 text-sm font-medium hover:bg-background/70 transition cursor-pointer"
