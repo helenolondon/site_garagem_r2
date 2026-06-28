@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { HeroComponent } from './hero/hero.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { PricingComponent } from './pricing/pricing.component';
@@ -14,7 +13,6 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     HeaderComponent,
-    HeroComponent,
     ServicesComponent,
     AboutComponent,
     PricingComponent,

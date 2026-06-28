@@ -13,22 +13,50 @@ export class PricingComponent {
   whatsappUrl = 'https://wa.me/5527997332033?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço.';
   plans = [
     {
-      name: 'Essencial',
-      price: 'R$ 80',
-      items: ['Lavagem externa detalhada', 'Pretinho nos pneus', 'Limpeza dos vidros', 'Aspiração simples']
-    },
-    {
-      name: 'Premium',
-      price: 'R$ 100',
-      featured: true,
-      items: ['Tudo do Essencial', 'Limpeza dos cantos de porta', 'Limpeza dos plásticos internos', 'Limpeza das caixas de roda', 'Aspiração completa']
-    },
-    {
-      name: 'Premium Plus',
-      price: 'R$ 140',
+      name: 'Lavagem detalhada carro pequeno',
+      price: 'R$ 90',
       featured: false,
-      items: ['Tudo do Premium', 'Aplicação de cera em pasta']
-    }
+      precoFixo: true,
+      items: ['Lavagem externa detalhada', 'Limpeza dos pásticos internos', 'Limpeza dos vidros',
+        'Aspiração', 'Pretinho nos pneus']
+    },
+    {
+      name: 'Polimento',
+      price: 'R$ 450',
+      featured: false,
+      precoFixo: false,
+      items: ['Limpeza externa detalhada', 'Limpeza interna simples', 'Descontaminação de pintura',
+        'Remoção de até 80% dos riscos', 'Aplicação de cera em pasta']
+    },
+    {
+      name: 'Revitalização de farol',
+      price: 'R$ 250,00',
+      featured: false,
+      precoFixo: false,
+      items: ['Polimento do farol', 'Remoção de amarelado', 'Aplicação de vitrificador', 'Garantia de 1 ano']
+    },
+    {
+      name: 'Restauração de farol',
+      price: 'R$ 350,00',
+      featured: false,
+      precoFixo: false,
+      items: ['Polimento do farol', 'Remoção do amarelado', 'Aplicação de proteção definitiva de alta qualidade', 'Garantia de 2 anos']
+    },
+    {
+      name: 'Cristalização de vidros',
+      price: 'R$ 150,00',
+      featured: false,
+      precoFixo: true,
+      items: ['Descontaminação dos vidros', 'Aplicação de cristalizador']
+    },
+    {
+      name: 'Higienização interna',
+      price: 'R$ 300,00',
+      featured: false,
+      precoFixo: true,
+      items: ['Limpeza interna detalhada', 'Aplicação de hidratante nos plásticos', 'Limpeza dos bancos',
+        'Aspiração completa']
+    },
   ];
 
   constructor(private gaService: GoogleAnalyticsService) {}
@@ -40,6 +68,11 @@ export class PricingComponent {
       'currency': 'BRL',
       'transaction_id': `plan_${plan.name}_${Date.now()}`
     });
-    window.open(this.whatsappUrl, '_blank');
+
+    const mensagem = plan.precoFixo
+      ? `Olá! Gostaria de agendar o serviço: ${plan.name} por ${plan.price}.`
+      : `Olá! Gostaria de solicitar um orçamento para: ${plan.name}.`;
+    const url = `https://wa.me/5527997332033?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
   }
 }
