@@ -3,8 +3,9 @@ import { HomeComponent } from './home/home.component';
 import { PromocoesComponent } from './promocoes/promocoes.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/promocoes', pathMatch: 'full' },
+  { path: '', redirectTo: '/pricing', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'pricing', component: HomeComponent },
   // { path: 'promocoes', component: PromocoesComponent },
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/pricing' }
 ];

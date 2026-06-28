@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { GoogleAnalyticsService } from '../../google-analytics.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -17,6 +17,12 @@ export class HeaderComponent {
 
   navigateToPromocoes(): void {
     this.router.navigate(['/promocoes']);
+  }
+
+  navigateToDefault(): void {
+    this.router.navigate(['/pricing']).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   agendarWhatsApp(): void {
@@ -30,8 +36,8 @@ export class HeaderComponent {
 
   scrollToSection(sectionId: string): void {
     // Se não estiver na home, navega para home primeiro
-    if (this.router.url !== '/home') {
-      this.router.navigate(['/home']).then(() => {
+    if (this.router.url !== '/pricing') {
+      this.router.navigate(['/pricing']).then(() => {
         setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
