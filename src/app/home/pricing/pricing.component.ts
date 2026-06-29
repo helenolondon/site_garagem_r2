@@ -14,7 +14,7 @@ export class PricingComponent {
   plans = [
     {
       name: 'Lavagem detalhada carro pequeno',
-      price: 'R$ 90',
+      price: 'R$ 80,00',
       featured: false,
       precoFixo: true,
       items: ['Lavagem externa detalhada', 'Limpeza dos pásticos internos', 'Limpeza dos vidros',
@@ -22,7 +22,7 @@ export class PricingComponent {
     },
     {
       name: 'Polimento',
-      price: 'R$ 450',
+      price: 'R$ 350,00',
       featured: false,
       precoFixo: false,
       items: ['Limpeza externa detalhada', 'Limpeza interna simples', 'Descontaminação de pintura',
@@ -30,7 +30,7 @@ export class PricingComponent {
     },
     {
       name: 'Revitalização de farol',
-      price: 'R$ 250,00',
+      price: 'R$ 200,00',
       featured: false,
       precoFixo: false,
       items: ['Polimento do farol', 'Remoção de amarelado', 'Aplicação de vitrificador', 'Garantia de 1 ano']
