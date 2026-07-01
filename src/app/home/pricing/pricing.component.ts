@@ -13,7 +13,7 @@ export class PricingComponent {
   whatsappUrl = 'https://wa.me/5527997332033?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço.';
   plans = [
     {
-      name: 'Lavagem detalhada carro pequeno',
+      name: 'Lavagem completa carro pequeno',
       price: 'R$ 80,00',
       featured: false,
       precoFixo: true,
@@ -50,12 +50,11 @@ export class PricingComponent {
       items: ['Descontaminação dos vidros', 'Aplicação de cristalizador']
     },
     {
-      name: 'Higienização interna',
-      price: 'R$ 300,00',
+      name: 'Limpeza dos bancos',
+      price: 'R$ 250,00',
       featured: false,
       precoFixo: true,
-      items: ['Limpeza interna detalhada', 'Aplicação de hidratante nos plásticos', 'Limpeza dos bancos',
-        'Aspiração completa']
+      items: ['Limpeza dos bancos', 'Aspiração completa']
     },
   ];
 
